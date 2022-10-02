@@ -79,6 +79,7 @@ def onedata(id):
     
     
     # UPDATE a data by id
+    
     if request.method == 'PUT':
         body = request.json
         firstName = body['firstName']
@@ -99,6 +100,7 @@ def onedata(id):
         print('\n # Update successful # \n')
         return jsonify({'status': 'Data id: ' + id + ' is updated!'})
 
+    
 if __name__ == '__main__':
     app.debug = True
     app.run()
